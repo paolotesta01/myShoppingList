@@ -51,8 +51,10 @@
     fontSizeBar = snapshot.val().fontSizeBar
     if (fontSizeBar == "off") {
         hideSlider()
+        switchSlider.innerHTML = "Font size bar"
     } else {
         hideSliderTwo()
+        switchSlider.innerHTML = "Input font size"
     }
  })
 
