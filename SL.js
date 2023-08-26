@@ -157,6 +157,7 @@
 
  
 switchSlider.addEventListener("click",()=> {
+    demo.innerHTML = fontSizeBar
     if (fontSizeBar == "on") {
         hideSlider()
         set (ref(db, "settings/fontSizeBar"), {fontSizeBar : "off"})
