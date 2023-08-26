@@ -131,7 +131,6 @@
  range.addEventListener("touchstart", () => {
      
      bubble.style.transform = "scale(1)"
-     //listItems.style.fontSize = `${range.value}px`
      bubble.style.transition = "150ms"
      bubble.innerHTML = `${range.value}`
      bubble.style.left = `${(range.value-16) * (100 / (36 - 16))}%`
@@ -140,7 +139,7 @@
  
 
  range.addEventListener("touchmove", () => {
-     //bubble.style.transform = "scale(1)"
+     listItems.style.fontSize = `${range.value}px`
      bubble.style.transition = "0ms"
      bubble.innerHTML = `${range.value}`
      bubble.style.left = `${(range.value-16) * (100 / (36 - 16))}%`
