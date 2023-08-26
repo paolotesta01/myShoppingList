@@ -116,6 +116,7 @@
          push( ref(db,"itemsToBuy/"), inputField.value.toLowerCase())
          inputField.value = ""
          inputField.placeholder = "Add a new item and press Enter"
+         listItems.focus()
      }
  })
  inputField.addEventListener("mouseleave", () => {
