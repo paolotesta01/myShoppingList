@@ -43,8 +43,7 @@
      fontSize.value = fontSizeFromDB
      range.value = fontSizeFromDB
      bubble.innerHTML = `${fontSizeFromDB}`
-     bubble.style.left = `${(range.value-16) * (100 / (36 - 16))}%`
-     
+     bubble.style.left = `${(range.value-16) * (100 / (36 - 16))}%`  
  }
  )
 
@@ -55,7 +54,6 @@
     } else {
         hideSliderTwo()
     }
-
  })
 
  onValue(ref(db,"itemsToBuy/"), (snapshot) => {
@@ -131,6 +129,7 @@
 })
  
  range.addEventListener("input", () => {
+     bubble.style.transform = "scale(1)"
      listItems.style.fontSize = `${range.value}px`
      bubble.style.transition = "none"
      bubble.innerHTML = `${range.value}`
