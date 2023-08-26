@@ -35,6 +35,7 @@
  const fontSizeBarMinus = document.getElementById("font-size-bar-minus")
  const fontSizeBarPlus = document.getElementById("font-size-bar-plus")
  let fontSizeBar = ""
+ let showBubble = "off"
  
  onValue(ref(db,`settings/font-size`), (snapshot)=>{
      
@@ -129,20 +130,21 @@
 })
  
  range.addEventListener("input", () => {
+     
      bubble.style.transform = "scale(1)"
      listItems.style.fontSize = `${range.value}px`
-     bubble.style.transition = "none"
+     bubble.style.transition = "150ms"
      bubble.innerHTML = `${range.value}`
      bubble.style.left = `${(range.value-16) * (100 / (36 - 16))}%`
      fontSize.textContent = range.value
  })
  
 
- range.addEventListener("change", () => {
-     bubble.style.transform = "scale(1)"
-     bubble.style.transition = "150ms"
-     bubble.innerHTML = `${range.value}`   
- })
+ //range.addEventListener("change", () => {
+     //bubble.style.transform = "scale(1)"
+     //bubble.style.transition = "150ms"
+     //bubble.innerHTML = `${range.value}`   
+ //})
  
  range.addEventListener("mouseout", () => {
      bubble.style.transform = "scale(0)"
