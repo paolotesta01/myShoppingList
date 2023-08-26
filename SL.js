@@ -35,7 +35,6 @@
  const fontSizeBarMinus = document.getElementById("font-size-bar-minus")
  const fontSizeBarPlus = document.getElementById("font-size-bar-plus")
  let fontSizeBar = ""
- let showBubble = "off"
  
  onValue(ref(db,`settings/font-size`), (snapshot)=>{
      
@@ -129,10 +128,10 @@
     inputField.style.color = "#504f4d"    
 })
  
- range.addEventListener("input", () => {
+ range.addEventListener("touchstart", () => {
      
      bubble.style.transform = "scale(1)"
-     listItems.style.fontSize = `${range.value}px`
+     //listItems.style.fontSize = `${range.value}px`
      bubble.style.transition = "150ms"
      bubble.innerHTML = `${range.value}`
      bubble.style.left = `${(range.value-16) * (100 / (36 - 16))}%`
