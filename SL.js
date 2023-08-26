@@ -34,7 +34,6 @@
  const rangeWrap = document.querySelector(".range-wrap")
  const fontSizeBarMinus = document.getElementById("font-size-bar-minus")
  const fontSizeBarPlus = document.getElementById("font-size-bar-plus")
- let fontSizeBar = "on"
  
  
  onValue(ref(db,`settings/font-size`), (snapshot)=>{
