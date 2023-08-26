@@ -136,11 +136,10 @@
      bubble.innerHTML = `${range.value}`
      bubble.style.left = `${(range.value-16) * (100 / (36 - 16))}%`
      fontSize.textContent = range.value
-     
  })
  
 
- range.addEventListener("click", () => {
+ range.addEventListener("focus", () => {
      bubble.style.transform = "scale(1)"
      bubble.style.transition = "150ms"
      bubble.innerHTML = `${range.value}`   
