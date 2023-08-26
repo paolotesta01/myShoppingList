@@ -34,7 +34,7 @@
  const rangeWrap = document.querySelector(".range-wrap")
  const fontSizeBarMinus = document.getElementById("font-size-bar-minus")
  const fontSizeBarPlus = document.getElementById("font-size-bar-plus")
- 
+ let fontSizeBar = ""
  
  onValue(ref(db,`settings/font-size`), (snapshot)=>{
      
@@ -49,7 +49,7 @@
  )
 
  onValue(ref(db,`settings/fontSizeBar`), (snapshot)=>{
-    let fontSizeBar = snapshot.val().fontSizeBar
+    fontSizeBar = snapshot.val().fontSizeBar
     if (fontSizeBar == "off") {
         hideSlider()
     } else {
