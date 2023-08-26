@@ -140,7 +140,7 @@
  })
  
 
- range.addEventListener("mouseover", () => {
+ range.addEventListener("click", () => {
      bubble.style.transform = "scale(1)"
      bubble.style.transition = "150ms"
      bubble.innerHTML = `${range.value}`   
