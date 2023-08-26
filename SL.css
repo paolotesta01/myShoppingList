@@ -169,6 +169,7 @@ html, body {
     outline: none;
     border: none;
     color: #504f4d;
+    user-select: none;
     
 }
 
