@@ -85,7 +85,7 @@
             push(ref(db,"itemsToBuy"), `${archivedItem.textContent}`)
             archiveTitleBox.style.marginBottom = "15px"
             remove(ref(db,`archive/${archivedItemId}`))
-            inputEl.blur()
+            inputField.blur()
         })    
     }
     archivedNrEl.innerHTML = archivedNr
