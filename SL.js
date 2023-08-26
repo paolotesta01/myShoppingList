@@ -58,7 +58,6 @@
 
  onValue(ref(db,"itemsToBuy/"), (snapshot) => {
      inputField.focus()
-     //inputField.select()
      if (!snapshot.exists()) {  
          listEmpty.textContent = "Your list is empty"
          listItems.innerHTML = ""
@@ -158,17 +157,14 @@
  
 switchSlider.addEventListener("click",()=> {
     if (fontSizeBar == "on") {
+        switchSlider.innerHTML = "Input font size"
         hideSlider()
         set (ref(db, "settings/fontSizeBar"), {fontSizeBar : "off"})
-        switchSlider.innerHTML = "Input font size"
-        fontSizeBar = "off" 
-        
-    }
+        }
     else {
+        switchSlider.innerHTML = "Font size bar"
         hideSliderTwo()
         set (ref(db, "settings/fontSizeBar"), {fontSizeBar : "on"})
-        switchSlider.innerHTML = "Font size bar"
-        fontSizeBar = "on"
     }
   })
 
