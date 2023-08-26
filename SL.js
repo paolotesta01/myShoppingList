@@ -116,9 +116,10 @@
          push( ref(db,"itemsToBuy/"), inputField.value.toLowerCase())
          inputField.value = ""
          inputField.placeholder = "Add a new item and press Enter"
-         listItems.focus()
+         inputField.blur()
      }
  })
+
  inputField.addEventListener("mouseleave", () => {
     inputField.placeholder = "Add a new item and press Enter"
     inputField.style.backgroundColor = "#f9e1b4"
