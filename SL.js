@@ -157,16 +157,16 @@
  
 switchSlider.addEventListener("click",()=> {
     if (fontSizeBar == "on") {
-        switchSlider.innerHTML = "Input font size"
+        switchSlider.innerHTML = "Font size bar"
         hideSlider()
         set (ref(db, "settings/fontSizeBar"), {fontSizeBar : "off"})
-        //fontSizeBar = "off"
+        fontSizeBar = "off"
         }
     else if (fontSizeBar == "off") {
-        switchSlider.innerHTML = "Font size bar"
+        switchSlider.innerHTML = "Input font size"
         hideSliderTwo()
         set (ref(db, "settings/fontSizeBar"), {fontSizeBar : "on"})
-        //fontSizeBar = "on"
+        fontSizeBar = "on"
     }
   })
 
