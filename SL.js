@@ -95,6 +95,7 @@
          
          itemList.addEventListener("click", () => {
              remove(ref(db,"itemsToBuy/" + currentItemId))
+             inputField.blur()
          })   
          
          itemList.addEventListener("mouseover", () => {
