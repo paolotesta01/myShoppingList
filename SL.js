@@ -146,7 +146,7 @@
      bubble.style.left = `${(range.value-16) * (100 / (36 - 16))}%`
  })
  
- range.addEventListener("mouseout", () => {
+ range.addEventListener("touchend", () => {
      bubble.style.transform = "scale(0)"
      fontSize.value = range.value
      set( ref(db,"settings/font-size"), {
