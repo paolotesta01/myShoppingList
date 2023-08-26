@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+
+    <title>myShoppingList</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="SL.css" >
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter+Tight:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <img src="ink.png" alt="logo.png" id="logo">
+        <p id="title">My Shopping List</p>
+        <input type="text" id="input-field" placeholder="Add a new item and press Enter" autocomplete="off">
+
+        <div class="slider">
+
+            <div class="bubble-wrap">
+                <span class="bubble"></span>
+            </div>
+
+            <div class="range-wrap">
+                <button id = "font-size-bar-minus" class="Aa-btn">Aa-</button>
+                <input type="range" min="16" max="36" step="1" class="range">
+                <button id = "font-size-bar-plus" class="Aa-btn">Aa+</button>
+            </div>
+        </div>
+
+        
+        <div class="slider-two">
+            
+                <button id="font-size-minus" class="Aa-btn-south">Aa-</button>
+                <input type="text" id="font-size">
+                <button id="font-size-plus" class="Aa-btn-south">Aa+</button>
+        </div>
+
+        <button id="switch-slider">Input font size</button>
+
+        <p id="list-empty"></p>
+        <ul class="list-items"></ul>        
+        
+        <p id="demo"></p>
+        
+    </div>
+
+    <div class="archive-container">
+
+        <div class="archiveTitleBox">
+            <p id="archive-title">Archive (<span id="archived-nr">0</span>)</p>
+        </div>
+        
+        <div class="archivedItemsBox">
+            <ul class="archivedItems"></ul>
+        </div>
+
+        
+        
+    </div>
+    <div class="clearArchiveBox">
+        <button id="clear-archive-button">Clear archive</button>
+    </div>
+    <script src="SL.js" type="module"></script>
+</body>
