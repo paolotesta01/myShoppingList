@@ -135,6 +135,7 @@
      bubble.style.transition = "none"
      bubble.innerHTML = `${range.value}`
      bubble.style.left = `${(range.value-16) * (100 / (36 - 16))}%`
+     fontSize.textContent = range.value
      
  })
  
