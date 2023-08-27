@@ -146,16 +146,7 @@
   
          })
       
-         itemList.addEventListener("mouseover", () => {
-             itemList.style.translate = "0px -3px"
-             itemList.style.opacity = "0.5"
-             itemList.style.transition = "100ms"
-         })
-             
-         itemList.addEventListener("mouseout", () => {
-                 itemList.style.translate = "0px 3px"
-                 itemList.style.opacity = "1"
-             })
+         
      }}
      })
    
