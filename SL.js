@@ -130,19 +130,20 @@
          itemList.setAttribute("class", "itemList")
          listItems.append(itemList)
          
-         
+         itemList.addEventListener("touchstart", () => {
+            itemList.style.transform = "scale(0)"
+            itemList.style.transition = "300ms"
+            itemList.blur()
+            switchSlider.focus()
+          
+         })   
+      
          itemList.addEventListener("touchend", () => {
              remove(ref(db,"itemsToBuy/" + currentItemId))
              inputField.blur()
              push(ref(db,"archive/"), currentItemValue)
          })
-
-       itemList.addEventListener("touchstart", () => {
-            itemList.style.transform = "scale(0)"
-            itemList.style.transition = "300ms"
-            itemList.blur()
-         })   
-         
+      
          itemList.addEventListener("mouseover", () => {
              itemList.style.translate = "0px -3px"
              itemList.style.opacity = "0.5"
