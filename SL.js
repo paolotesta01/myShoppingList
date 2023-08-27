@@ -137,10 +137,11 @@
          })   
       
          itemList.addEventListener("touchend", () => {
+             itemList.blur()
              remove(ref(db,"itemsToBuy/" + currentItemId))
              inputField.blur()
              push(ref(db,"archive/"), currentItemValue)
-             document.getElementById("title").focus()
+             
          })
       
          itemList.addEventListener("mouseover", () => {
