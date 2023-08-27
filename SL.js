@@ -133,8 +133,8 @@
          itemList.addEventListener("touchstart", () => {
             itemList.style.transform = "scale(0)"
             itemList.style.transition = "300ms"
-            itemList.blur()
-            switchSlider.focus()
+            listItems.blur()
+            
           
          })   
       
