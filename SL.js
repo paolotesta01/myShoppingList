@@ -137,7 +137,7 @@
          })   
       
          itemList.addEventListener("touchend", () => {
-             itemList.blur()
+             document.activeElement.blur()
              remove(ref(db,"itemsToBuy/" + currentItemId))
              inputField.blur()
              push(ref(db,"archive/"), currentItemValue)
