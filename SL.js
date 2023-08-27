@@ -131,10 +131,15 @@
          listItems.append(itemList)
          
          
-         itemList.addEventListener("click", () => {
+         itemList.addEventListener("touchend", () => {
              remove(ref(db,"itemsToBuy/" + currentItemId))
              inputField.blur()
              push(ref(db,"archive/"), currentItemValue)
+         })
+
+       itemList.addEventListener("touchstart", () => {
+            itemList.style.transform = "scale(0)"
+            itemList.style.transition = "200ms"
          })   
          
          itemList.addEventListener("mouseover", () => {
