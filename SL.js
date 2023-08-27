@@ -81,7 +81,7 @@
         archivedItems.append(archivedItem)
         archivedNr += 1
 
-        archivedItem.addEventListener("click", ()=> {
+        archivedItem.addEventListener("touchstart", ()=> {
             push(ref(db,"itemsToBuy"), `${archivedItem.textContent}`)
             remove(ref(db,`archive/${archivedItemId}`))
             inputField.blur()
@@ -143,12 +143,7 @@
              push(ref(db,"archive/"), currentItemValue)
              listItems.select()
          })  
-         itemList.addEventListener("click", () => {
-            remove(ref(db,"itemsToBuy/" + currentItemId))
-            inputField.blur()
-            push(ref(db,"archive/"), currentItemValue)
-            listItems.select()
-        })  
+         
      }}
      })
    
