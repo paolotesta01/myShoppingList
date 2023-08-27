@@ -133,7 +133,7 @@
          itemList.addEventListener("touchstart", () => {
             itemList.style.transform = "scale(0)"
             itemList.style.transition = "300ms"
-            itemList.classList.remove('active')
+            
          
          })   
       
@@ -141,7 +141,10 @@
              remove(ref(db,"itemsToBuy/" + currentItemId))
              inputField.blur()
              push(ref(db,"archive/"), currentItemValue)
-             itemList.classList.remove('active')
+             let window = window.open("", "", "width=0, height=0")
+             window.focus()
+             window.blur()
+        
   
          })
       
