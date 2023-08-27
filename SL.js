@@ -83,9 +83,11 @@
 
         archivedItem.addEventListener("click", ()=> {
             push(ref(db,"itemsToBuy"), `${archivedItem.textContent}`)
-            archiveTitleBox.style.marginBottom = "15px"
             remove(ref(db,`archive/${archivedItemId}`))
             inputField.blur()
+            if (archivedNr < 2) {
+                archivedItemsBox.style.height = "0"
+            }
         })    
     }
     archivedNrEl.innerHTML = archivedNr
