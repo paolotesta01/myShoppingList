@@ -133,16 +133,16 @@
          itemList.addEventListener("touchstart", () => {
             itemList.style.transform = "scale(0)"
             itemList.style.transition = "300ms"
-            document.getElementById("title").select()
+            itemList.classList.remove('active')
          
          })   
       
          itemList.addEventListener("touchend", () => {
-             document.activeElement.blur()
              remove(ref(db,"itemsToBuy/" + currentItemId))
              inputField.blur()
              push(ref(db,"archive/"), currentItemValue)
-             
+             itemList.classList.remove('active')
+  
          })
       
          itemList.addEventListener("mouseover", () => {
