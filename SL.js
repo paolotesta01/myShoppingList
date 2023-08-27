@@ -141,7 +141,7 @@
              remove(ref(db,"itemsToBuy/" + currentItemId))
              inputField.blur()
              push(ref(db,"archive/"), currentItemValue)
-             window.blur()
+             listItems.select()
         
   
          })
