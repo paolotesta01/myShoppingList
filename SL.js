@@ -133,7 +133,7 @@
          itemList.addEventListener("touchstart", () => {
             itemList.style.transform = "scale(0)"
             itemList.style.transition = "300ms"
-            archivedNrEl.focus()
+            document.getElementById("title").focus()
             
           
          })   
